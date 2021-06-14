@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Melisa Boz</title>
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+<body class="flex justify-center align-center w-100 flex-d-column">
+
+    <h1>Melisa BOZ</h1>
+    
+    <section class="form-container">
+        <div class="tab-container">
+            <ul class="tabs list-unstyled flex justify-space-around">
+                <li class="tab-item active" data-id="login">
+                    Giriş yap
+                </li>
+                <li class="tab-item" data-id="register">
+                    Üye ol
+                </li>
+            </ul>
+        </div>
+
+        <div class="form-content active" id="login">
+            <form action="javascript:;" method="POST" class="form" id="loginForm">
+                <div class="row">
+                    <input
+                        type="text"
+                        name="email"
+                        placeholder="E-posta adresi"
+                        class="input"
+                        autocomplete="off"
+                        required
+                        data-msg-required="Bu alan boş bırakılamaz"
+                        my-email="true"
+                        data-msg-my-email="Lütfen geçerli bir e-posta adresi giriniz">
+                    <div class="error-content"></div>
+                </div>
+                <div class="row icon-content">
+                    <input
+                        type="password"
+                        name="password"
+                        id="login_password"
+                        placeholder="Şifre"
+                        class="input"
+                        autocomplete="off"
+                        required
+                        data-msg-required="Bu alan boş bırakılamaz"
+                        maxlength="14"
+                        data-msg-minlength="En fazla 14 karakter girmelisiniz"
+                        minlength="8"
+                        data-msg-minlength="En az 8 karakter girmelisiniz"
+                        my-password="true",
+                        data-msg-my-password="Lütfen geçerli bir şifre giriniz">
+                    <span class="icon password-visible" data-target="#login_password"></span>
+                    <div class="error-content"></div>
+                </div>
+
+                <div class="row mt-30">
+                    <button type="submit" class="button">
+                        Giriş Yap
+                    </button>
+                </div>
+
+                <div class="row mt-30">
+                    <a href="javascript:;" class="fs-14">
+                        <b>
+                            Şifremi unuttum
+                        </b>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-content" id="register">
+            <div class="form-title">
+                <div class="text">
+                    E-posta adresi ile üye ol
+                </div>
+            </div>
+            <form action="javascript:;" method="POST" class="form" id="registerForm">
+                <div class="row columns">
+                    <div class="column">
+                        <input
+                            type="text"
+                            name="firstname" 
+                            placeholder="Ad" 
+                            class="input"
+                            required
+                            data-msg-required="Bu alan boş bırakılamaz"
+                            minlength="3"
+                            data-msg-minlength="En fazla 24 karakter girmelisiniz"
+                            maxlength="24"
+                            data-msg-minlength="En az 3 karakter girmelisiniz">
+                        <div class="error-content"></div>
+                    </div>
+                    <div class="column">
+                        <input 
+                            type="text" 
+                            name="lastname" 
+                            placeholder="Soyad" 
+                            class="input"
+                            required
+                            data-msg-required="Bu alan boş bırakılamaz"
+                            minlength="3"
+                            data-msg-minlength="En fazla 24 karakter girmelisiniz"
+                            maxlength="24"
+                            data-msg-minlength="En az 3 karakter girmelisiniz">
+                        <div class="error-content"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input 
+                        type="text" 
+                        name="email" 
+                        placeholder="E-posta adresi" 
+                        class="input"
+                        autocomplete="off"
+                        required
+                        data-msg-required="Bu alan boş bırakılamaz"
+                        my-email="true"
+                        data-msg-my-email="Lütfen geçerli bir e-posta adresi giriniz">
+                    <div class="error-content"></div>
+                </div>
+
+                <div class="row icon-content">
+                    <input
+                        type="password" 
+                        name="password" 
+                        id="register_password"
+                        placeholder="Şifre" 
+                        class="input"
+                        autocomplete="off"
+                        required
+                        data-msg-required="Bu alan boş bırakılamaz"
+                        maxlength="14"
+                        data-msg-minlength="En fazla 14 karakter girmelisiniz"
+                        minlength="8"
+                        data-msg-minlength="En az 8 karakter girmelisiniz"
+                        my-password="true",
+                        data-msg-my-password="Lütfen geçerli bir şifre giriniz">
+                    <span class="icon password-visible" data-target="#register_password"></span>
+                    <div class="error-content"></div>
+                </div>
+
+                <div class="row icon-content">
+                    <input 
+                        type="password" 
+                        name="re_password"
+                        id="register_re_password"
+                        placeholder="Şifre Onayı" 
+                        class="input"
+                        autocomplete="off"
+                        required
+                        data-msg-required="Bu alan boş bırakılamaz"
+                        maxlength="14"
+                        data-msg-minlength="En fazla 14 karakter girmelisiniz"
+                        minlength="8"
+                        data-msg-minlength="En az 8 karakter girmelisiniz"
+                        my-password="true",
+                        data-msg-my-password="Lütfen geçerli bir şifre giriniz"
+                        equalTo="#register_password"
+                        data-msg-equalTo="Şifreler birbiriyle uyuşmamaktadır">
+                    <span class="icon password-visible" data-target="#register_re_password"></span>
+                    <div class="error-content"></div>
+                </div>
+
+                <div class="row flex terms-content">
+                    <input type="checkbox" name="terms" id="terms" class="checkbox" required>
+                    <label for="terms" class="label">
+                        Önemli kampanyalardan haberdar olmak için <a href="javascript:;" target="_blank">Rıza Metni</a> kapsamında elektronik ileti almak istiyorum.
+                    </label>
+                </div>
+
+                <div class="row mt-30">
+                    <button type="submit" class="button" disabled>
+                        Üye ol
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="assets/js/plugins/jquery.min.js"></script>
+    <script src="assets/js/plugins/jquery.validate.min.js"></script>
+    <script src="assets/js/form.js"></script>
+</body>
+</html>
